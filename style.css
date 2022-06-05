@@ -1,0 +1,77 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.game-board {
+width: 80%;
+height: 500px;
+border: 1px solid #333;
+margin: auto;
+position: relative;
+overflow: hidden;
+}
+
+.x-wing {
+position: absolute;
+bottom: 0;
+width: 150px;
+animation: x-wing-animation 2s infinite linear;
+} 
+
+.darth-vader {
+width: 150px;
+position:absolute;
+bottom: 0;
+}
+
+.jump {
+    animation: jump 1000ms ease-out;
+}
+
+@keyframes x-wing-animation {
+from {
+ right: -150px;
+}
+to {
+ right: 100%;
+}
+}
+
+@keyframes jump {
+
+0% {
+    bottom: 0;
+}
+
+5% {
+    bottom: 200px;
+}
+
+40% {
+    bottom: 200px;
+}
+
+60% {
+    /* bottom: 200px; */
+}
+
+100% {
+    bottom: 0;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
