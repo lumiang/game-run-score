@@ -5,9 +5,8 @@ box-sizing: border-box;
 }
 
 .game-board {
-width: 80%;
+width: 100%;
 height: 500px;
-border: 1px solid #333;
 margin: auto;
 position: relative;
 overflow: hidden;
@@ -15,34 +14,78 @@ overflow: hidden;
 
 .x-wing {
 position: absolute;
-bottom: 0;
+bottom: 30px;
 width: 150px;
 animation: x-wing-animation 2s infinite linear;
+z-index: 4;
 } 
 
 .darth-vader {
 width: 150px;
 position:absolute;
-bottom: 0;
+bottom: 25px;
+z-index: 10;
 }
+
+.destroyer {
+position:absolute;
+bottom: -30px;
+width: 100%;
+z-index: 2;
+}
+
+.espaco {
+width: 100%;
+z-index: 1;
+position: absolute;
+
+}
+
+.death-star {
+bottom: 250px;
+position: absolute;
+z-index: 3;
+animation: death-star-animation 100s infinite linear;
+
+}
+
+.placar {
+    position: absolute;
+    top: 10px;
+    z-index: 10;
+    right: 10px;
+    padding: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
 
 .jump {
     animation: jump 1000ms ease-out;
 }
 
 @keyframes x-wing-animation {
-from {
- right: -150px;
+    from {
+        right: -150px;
+    }
+    to {
+        right: 100%;
+    }
 }
-to {
- right: 100%;
-}
+
+@keyframes death-star-animation {
+    from {
+        right: -250px;
+    }
+    to {
+        right: 100%;
+    }
 }
 
 @keyframes jump {
 
 0% {
-    bottom: 0;
+    bottom: 25px;
 }
 
 5% {
@@ -58,7 +101,7 @@ to {
 }
 
 100% {
-    bottom: 0;
+    bottom: 25px;
 }
 
 
